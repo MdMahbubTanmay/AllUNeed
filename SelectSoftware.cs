@@ -101,6 +101,7 @@ namespace AllUNeed
 
             if (downloadsPath != "thanks_abrar_vai")
             {
+                MessageBox.Show("U have set a custom path for downloads: " + downloadsPath + " , Some chromium based app like brave browser wont follow this and will install in its default path becuse brave uses extra setup command to force itself to install in its default path. Use default path if any software fails to install on the custom path (Restart app to use default path) ");
                 if (!Directory.Exists(downloadsPath))
                 {
                     MessageBox.Show("Inavlid path, nice try baby 😉 (Agerbar eita handel na korai crush dicilo jevabe ami tar upor crush kheyecilam, ahhh life :(  )");

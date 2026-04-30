@@ -1,7 +1,9 @@
-# <All U Need> Software Installer
+# All U Need : All in one Software Installer
 
 **Whats New**
 * Added Custom Installation Path Feature
+```Warning : custom path selection will not work on some chromium based app like  brave and some others as they always force the installer to install in default path```
+
 
 ![Custom Path Preview](https://i.postimg.cc/bdcxYLvj/Screenshot-2026-05-01-011358Custom.png)
 
