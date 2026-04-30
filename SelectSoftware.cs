@@ -96,7 +96,7 @@ namespace AllUNeed
 
             if (WhatSelected.Count == 0)
             {
-                MessageBox.Show("Select atleast one item baby. 💩");
+                MessageBox.Show("Select atleast one item , baby. 💩");
                 return;
             }
 
