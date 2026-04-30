@@ -79,6 +79,13 @@
             button1 = new Button();
             label8 = new Label();
             label9 = new Label();
+            panel1 = new Panel();
+            label12 = new Label();
+            button2_Path = new Button();
+            label11 = new Label();
+            textBox1_Path = new TextBox();
+            label10 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -563,11 +570,11 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Cyan;
+            button1.BackColor = Color.MintCream;
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(266, 561);
+            button1.Location = new Point(561, 421);
             button1.Name = "button1";
-            button1.Size = new Size(158, 38);
+            button1.Size = new Size(122, 40);
             button1.TabIndex = 48;
             button1.Text = "Install";
             button1.UseVisualStyleBackColor = false;
@@ -587,11 +594,74 @@
             // 
             label9.AutoSize = true;
             label9.ForeColor = Color.Red;
-            label9.Location = new Point(513, 602);
+            label9.Location = new Point(51, 597);
             label9.Name = "label9";
             label9.Size = new Size(179, 15);
             label9.TabIndex = 50;
             label9.Text = "github.com/MdMahbubTanmay";
+            label9.Click += label9_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Black;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label12);
+            panel1.Controls.Add(button2_Path);
+            panel1.Controls.Add(label11);
+            panel1.Controls.Add(textBox1_Path);
+            panel1.Controls.Add(label10);
+            panel1.Location = new Point(286, 467);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(396, 163);
+            panel1.TabIndex = 51;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.ForeColor = Color.DarkGray;
+            label12.Location = new Point(16, 80);
+            label12.Name = "label12";
+            label12.Size = new Size(322, 15);
+            label12.TabIndex = 56;
+            label12.Text = "Path Format: C:\\FolderName\\ANotherFolderNameIfUWant\\";
+            // 
+            // button2_Path
+            // 
+            button2_Path.Location = new Point(146, 108);
+            button2_Path.Name = "button2_Path";
+            button2_Path.Size = new Size(113, 36);
+            button2_Path.TabIndex = 55;
+            button2_Path.Text = "Set Custom Path";
+            button2_Path.UseVisualStyleBackColor = true;
+            button2_Path.Click += button2_Path_Click;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.Black;
+            label11.ForeColor = Color.Red;
+            label11.Location = new Point(146, 12);
+            label11.Name = "label11";
+            label11.Size = new Size(45, 15);
+            label11.TabIndex = 54;
+            label11.Text = "Default";
+            // 
+            // textBox1_Path
+            // 
+            textBox1_Path.Location = new Point(46, 45);
+            textBox1_Path.Name = "textBox1_Path";
+            textBox1_Path.Size = new Size(298, 23);
+            textBox1_Path.TabIndex = 53;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(14, 12);
+            label10.Name = "label10";
+            label10.Size = new Size(126, 15);
+            label10.TabIndex = 52;
+            label10.Text = "Select Installation Path";
             // 
             // SelectSoftware
             // 
@@ -599,9 +669,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(704, 642);
+            Controls.Add(button1);
+            Controls.Add(panel1);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(checkBox1);
             Controls.Add(checkBox2);
@@ -652,6 +723,8 @@
             Controls.Add(checkBox41);
             Name = "SelectSoftware";
             Text = "AllUNeed Installer";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -668,5 +741,11 @@
         private Button button1;
         private Label label8;
         private Label label9;
+        private Panel panel1;
+        private Label label10;
+        private Button button2_Path;
+        private Label label11;
+        private TextBox textBox1_Path;
+        private Label label12;
     }
 }

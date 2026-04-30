@@ -12,18 +12,24 @@ namespace AllUNeed
         Dictionary<string, string> Mahbub69 = new Dictionary<string, string>();
 
 
-        string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+        string downloadsPath = "thanks_abrar_vai";
 
         public SelectSoftware()
         {
             InitializeComponent();
-            makeThatShittyDick("Ki Obostha :(");
         }
 
 
         void AddApp(string name, string id, bool areUGay = false)
         {
             string CornHubDotKom = "winget install --id " + id + " --source winget";
+
+            if ( downloadsPath != "thanks_abrar_vai")
+            {
+                string location = downloadsPath + id;
+                CornHubDotKom = "winget install --id " + id + " --location \"" + location + "\" --source winget";
+            }
+
 
             Mahbub69.Add(name, CornHubDotKom);
         }
@@ -47,7 +53,7 @@ namespace AllUNeed
             AddApp("Postman", "Postman.Postman");
             AddApp("Docker", "Docker.DockerDesktop");
             AddApp("DBeaver", "dbeaver.dbeaver");
-            AddApp("Python", "Python.Python.3"); 
+            AddApp("Python", "Python.Python.3");
             AddApp("JDK21", "Oracle.JDK.21");
 
             // 3. Productivity & Office
@@ -56,7 +62,7 @@ namespace AllUNeed
             AddApp("Obsidian", "Obsidian.Obsidian");
             AddApp("Notion", "Notion.Notion");
             AddApp("LibreOffice", "LibreOffice.LibreOffice");
-            AddApp("Acrobat", "Adobe.Acrobat.Reader.GZ"); 
+            AddApp("Acrobat", "Adobe.Acrobat.Reader.GZ");
             AddApp("Zoom", "Zoom.Zoom");
 
             // 4. Utilities & System 
@@ -64,7 +70,7 @@ namespace AllUNeed
             AddApp("Rufus", "Rufus.Rufus");
             AddApp("TreeSize", "JAMSoftware.TreeSizeFree");
             AddApp("CrystalDisk", "CrystalDewWorld.CrystalDiskInfo");
-            AddApp("HWInfo", "REALiX.HWiNFO64"); 
+            AddApp("HWInfo", "REALiX.HWiNFO64");
             AddApp("BleachBit", "BleachBit.BleachBit");
             AddApp("GeekUninstaller", "GeekUninstaller.GeekUninstaller");
 
@@ -73,7 +79,7 @@ namespace AllUNeed
             AddApp("Handbrake", "Handbrake.Handbrake");
             AddApp("OBS", "OBSProject.OBSStudio");
             AddApp("ShareX", "ShareX.ShareX");
-            AddApp("GIMP", "GIMP.GIMP"); 
+            AddApp("GIMP", "GIMP.GIMP");
             AddApp("Inkscape", "Inkscape.Inkscape");
             AddApp("Spotify", "Spotify.Spotify");
 
@@ -92,6 +98,18 @@ namespace AllUNeed
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            if (downloadsPath != "thanks_abrar_vai")
+            {
+                if (!Directory.Exists(downloadsPath))
+                {
+                    MessageBox.Show("Inavlid path, nice try baby 😉 (Agerbar eita handel na korai crush dicilo jevabe ami tar upor crush kheyecilam, ahhh life :(  )");
+                    return;
+                }
+            }
+
+            Mahbub69.Clear();
+            makeThatShittyDick("Ki Obostha :(");
             CheckSwitchPosition();
 
             if (WhatSelected.Count == 0)
@@ -109,7 +127,7 @@ namespace AllUNeed
             foreach (string JohnnyJohnnyYesPapa in WhatSelected)
             {
 
-               
+
 
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
@@ -120,11 +138,11 @@ namespace AllUNeed
 
                 Process.Start(psi);
 
-                
+
             }
 
 
-            }
+        }
 
 
         private void CheckSwitchPosition()
@@ -171,6 +189,27 @@ namespace AllUNeed
             if (checkBox39.Checked) WhatSelected.Add("Bitwarden");
             if (checkBox40.Checked) WhatSelected.Add("ProtonVPN");
             if (checkBox41.Checked) WhatSelected.Add("qBittorrent");
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Path_Click(object sender, EventArgs e)
+        {
+            string s = textBox1_Path.Text.ToString();
+
+            if (Directory.Exists(s))
+            {
+                MessageBox.Show("Path set to: " + s);
+                label11.Text = s;
+                downloadsPath = s;
+            }
+            else
+            {
+                MessageBox.Show("Invalid path, Nice try baby. 💩");
+            }
         }
     }
 }
