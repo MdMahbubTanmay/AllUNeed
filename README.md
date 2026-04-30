@@ -1,5 +1,10 @@
 # <All U Need> Software Installer
 
+**Whats New**
+* Added Custom Installation Path Feature
+
+![Custom Path Preview](https://i.postimg.cc/bdcxYLvj/Screenshot-2026-05-01-011358Custom.png)
+
 **All U Need** is a powerful automation tool designed to make setting up a new Windows environment effortless. Built with C# and WinForms, it provides a "hacker-style" interface to select and install over 40 essential applications using the **Windows Package Manager (Winget)**.
 
 ## 💡 Why I Made This?
