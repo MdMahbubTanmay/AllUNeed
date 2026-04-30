@@ -23,7 +23,7 @@ namespace AllUNeed
 
         void AddApp(string name, string id, bool areUGay = false)
         {
-            string CornHubDotKom =  $"winget install --id {id} --silent --force --accept-package-agreements --accept-source-agreements ";
+            string CornHubDotKom = "winget install --id " + id + " --source winget";
 
             Mahbub69.Add(name, CornHubDotKom);
         }
@@ -100,48 +100,32 @@ namespace AllUNeed
                 return;
             }
 
-            foreach (string software in WhatSelected)
+            if (WhatSelected.Contains("Rufus") || WhatSelected.Contains("GeekUninstaller"))
             {
-                if (!Mahbub69.ContainsKey(software)) continue;
+                string saki_bal_hasan = WhatSelected.Contains("Rufus") ? "rufus" : "geek";
+                MessageBox.Show("U are installing " + (WhatSelected.Contains("Rufus") ? "Rufus" : "GeekUninstaller") + " which is a portable app, to run this portable app open cmd and type: " + saki_bal_hasan);
+            }
 
-                string command = Mahbub69[software];
-                bool isPortable = (software == "Rufus" || software == "GeekUninstaller");
-                //
+            foreach (string JohnnyJohnnyYesPapa in WhatSelected)
+            {
 
-                if (isPortable)
-                {
-                    command += $" --location \"{downloadsPath}\"";
-
-                }
+               
 
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
                     FileName = "cmd.exe",
-                    Arguments = "/c " + command,
+                    Arguments = "/k " + Mahbub69[JohnnyJohnnyYesPapa],
                     WindowStyle = ProcessWindowStyle.Normal
                 };
 
-                using (Process proc = Process.Start(psi))
-                {
-                    if (isPortable)
-                    {
-                        
-                        proc.WaitForExit();
+                Process.Start(psi);
 
-                       
-                        Process.Start("explorer.exe", downloadsPath);
-                    }
-                    else
-                    {
-                      
-                        proc.WaitForExit();
-                    }
-                }
+                
             }
 
-            MessageBox.Show("Congratulations, Downloaded All the 4k 8 tin Plus video for you :)");
-            MessageBox.Show("Just Kidding, downloded all the software u selected :\\ ");
-        }
+
+            }
+
 
         private void CheckSwitchPosition()
         {
