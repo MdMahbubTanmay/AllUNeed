@@ -187,6 +187,7 @@ namespace AllUNeed
             if (checkBox35.Checked) WhatSelected.Add("Discord");
             if (checkBox36.Checked) WhatSelected.Add("WhatsApp");
             if (checkBox37.Checked) WhatSelected.Add("Telegram");
+            if (checkBox38.Checked) WhatSelected.Add("Slack");
             if (checkBox39.Checked) WhatSelected.Add("Bitwarden");
             if (checkBox40.Checked) WhatSelected.Add("ProtonVPN");
             if (checkBox41.Checked) WhatSelected.Add("qBittorrent");
